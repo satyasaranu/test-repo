@@ -16,10 +16,17 @@ pipeline {
         }
 
         stage('unittest'){
+          steps {
+            sh 'echo unittest'
+          }
 
         }
         
         stages('SAST'){
+          steps {
+            sh 'echo SAST'
+
+          }
 
         }
     }
