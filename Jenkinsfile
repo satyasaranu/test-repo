@@ -22,7 +22,7 @@ pipeline {
 
         }
         
-        stages('SAST'){
+        stage('SAST'){
           steps {
             sh 'echo SAST'
 
