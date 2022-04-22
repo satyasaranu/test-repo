@@ -9,7 +9,7 @@ pipeline {
                 sh '''
                 a=5
                 b=6
-                c= `expr $a + $b`
+                c=`expr $a + $b`
                 '''
                 
             }
