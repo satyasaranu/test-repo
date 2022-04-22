@@ -3,6 +3,9 @@ pipeline {
     triggers {
         cron('* * * * *')
     }
+    tools {
+      ansible 'ansible2.12'
+    }
 
     stages {
         stage('Hello') {
@@ -18,9 +21,9 @@ pipeline {
             }
         }
 
-        stage('unittest'){
+        stage('ansibletest'){
           steps {
-            sh 'echo unittest'
+            sh 'ansible --version'
           }
 
         }
